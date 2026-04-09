@@ -1,0 +1,38 @@
+name_expe: coil3_iid/sobdrl
+lr: 0.001
+metrics: [inde, prediction, reconstruction]
+batch_size: 16
+epoch: 1.e+5
+seed: range(5)
+dataset: 
+  name: coil/3
+  n_actions_per_state: 6
+  m: 5
+algo_specs:
+  type: sobdrl
+  z_dim: 9
+  lamda_p: 1
+  lamda_d: .01
+  action_lr_rate: 10
+  image_specs:
+    type: ae
+    normalize: true
+    encoder_specs:
+      type: conv2d
+      hidden_channels: [32,64]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+    decoder_specs:
+      type: deconv2d
+      hidden_channels: [64,32]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+      final_activation_fn: sigmoid
+  action_specs:
+    type: rotation

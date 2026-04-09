@@ -1,0 +1,45 @@
+name_expe: coil3_ood/gmavae
+lr: 0.001
+metrics: [inde, dim, entropy, prediction, reconstruction, norm_z]
+batch_size: 16
+epoch: 1.e+5
+seed: range(5)
+dataset: 
+  name: coil/3
+  ood: true
+  m: 5
+algo_specs:
+  type: gmavae
+  z_dim: 9
+  lamda_r: 1
+  lamda_a: .3
+  lamda_d: 1.e-3
+  target_d:
+    type: affine
+    values: [1.4,0]
+    timesteps: [7.e+4,8.e+4]
+  group_masking: true
+  focal_loss: 1
+  action_specs:
+    type: dense
+    activation_fn: tanh
+  image_specs:
+    type: ae
+    z_noise: 0.1
+    encoder_specs:
+      type: conv2d
+      hidden_channels: [32,64]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+    decoder_specs:
+      type: deconv2d
+      hidden_channels: [64,32]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+      final_activation_fn: sigmoid

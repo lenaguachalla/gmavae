@@ -1,0 +1,38 @@
+name_expe: mpi3d_n6/sobdrl
+lr: 0.001
+metrics: [prediction, reconstruction, inde]
+batch_size: 16
+epoch: 5.e+5
+seed: range(5)
+dataset: 
+  name: mpi3d/lie
+  m: 5
+  action_noise_std: .63
+algo_specs:
+  type: sobdrl
+  z_dim: 4
+  lamda_p: 1
+  lamda_d: 1.e-2
+  image_specs:
+    type: ae
+    normalize: true
+    encoder_specs:
+      type: conv2d
+      hidden_channels: [32,64]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+    decoder_specs:
+      type: deconv2d
+      hidden_channels: [64,32]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+      final_activation_fn: sigmoid
+  action_specs:
+    type: rotation_continuous
+    hidden_dims: [256,256]

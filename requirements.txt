@@ -1,0 +1,14 @@
+torch
+numpy
+pillow
+pandas
+tqdm
+tensorboard
+tensorboardX
+pyyaml
+matplotlib
+einops
+scikit-learn
+seaborn
+nvidia-ml-py3
+h5py

@@ -1,0 +1,44 @@
+name_expe: mpi3d/hae
+lr: 0.001
+metrics: [prediction, reconstruction, inde]
+batch_size: 16
+epoch: 1.e+5
+seed: range(5)
+dataset: 
+  name: mpi3d/lie
+  m: 5
+algo_specs:
+  type: hae
+  z_dim: 4
+  lamda_p: .01
+  lamda_r: 1
+  image_specs:
+    type: ae
+    encoder_specs:
+      type: conv2d
+      hidden_channels: [32,64]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+    decoder_specs:
+      type: deconv2d
+      hidden_channels: [64,32]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+      final_activation_fn: sigmoid
+  action_specs:
+    type: concat
+    list:
+      - type: dense_continuous
+        hidden_dims: [256,256]
+        z_dim: 2
+        activation_fn: matrix_exp
+      - type: dense_continuous
+        hidden_dims: [256,256]
+        z_dim: 2
+        activation_fn: matrix_exp

@@ -1,0 +1,45 @@
+name_expe: flc/lsbdvaestar
+lr: 0.001
+metrics: [inde, prediction, reconstruction, norm_z]
+batch_size: 16
+epoch: 1.e+5
+seed: range(5)
+dataset: 
+  name: flatland/cyclic
+  m: 5
+algo_specs:
+  type: lsbdvae
+  lamda_r: 1
+  lamda_a: 0.01
+  action_specs:
+    type: concat
+    list:
+      - type: rotation
+        z_dim: 2
+      - type: rotation
+        z_dim: 2
+      - type: rotation
+        z_dim: 2
+  image_specs:
+    type: diffvae
+    beta: 1
+    latent_spaces:
+      - type: hyperspherical
+        z_dim: 6
+    encoder_specs:
+      type: conv2d
+      hidden_channels: [32,64]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+    decoder_specs:
+      type: deconv2d
+      hidden_channels: [64,32]
+      kernel_size: 8
+      pooling: null
+      stride: 4
+      padding: 2
+      hidden_dim: [256]
+      final_activation_fn: sigmoid
