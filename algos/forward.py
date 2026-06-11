@@ -51,6 +51,7 @@ class Forward(Algo):
         Az = self.encode_action(A)
         Z = torch.einsum('bij,bj->bi',Az,Z)
         return Z
+    
     def decode_image(self,
                      Z,
                      sample = False) :

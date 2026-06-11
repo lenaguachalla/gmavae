@@ -16,7 +16,7 @@ class CoilGenerator(Generator) :
                     # None means all rotations are available, int means only one rotation is available, list means the available actions
                  available_permut:List[int] = None, #permutation available for each object
                     # None means all permutations are available, list means the available actions
-                 coil_path: str = "../coil-100/", # path to the coil dataset, to be downloaded with the above link
+                 coil_path: str = "./data_raw/coil-100/", # path to the coil dataset, to be downloaded with the above link
                  permutation: bool = True, 
                  entangled_actions: int = None, #if not None, number of subgroup for each action
                  e: bool = False, #if True, identity action is added

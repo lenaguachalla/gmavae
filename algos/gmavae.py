@@ -69,7 +69,7 @@ class GMAVAE(Algo):
         self.focal_loss = focal_loss
         self.group_masking = group_masking
 
-        #initialize dist to get pi thourgh softmax
+        #initialize dist to get pi through softmax
         self.n_groups = len(groups)
         self.dist = nn.Parameter(torch.normal(0,0,size = (self.n_groups, z_dim-self.n_groups), device=self.device),
                                     requires_grad=True)
@@ -142,6 +142,7 @@ class GMAVAE(Algo):
             error[:,i] = ((Z[:,i+1] - Z_hat)**2).mean(dim=1)
         
         weights = torch.ones_like(error)
+        
         if self.focal_loss :
             error_group = torch.zeros_like(error).to(self.device)
             for a in range(self.n_action) :
