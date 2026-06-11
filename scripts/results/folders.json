@@ -1,161 +1,23 @@
 {
     "flc": {
-        "LSBD-VAE": {"expe_folder": "./expe/flc/lsbdvae/",
-                     "best_seed": 3},
-        "LSBD-VAE*": {"expe_folder": "./expe/flc/lsbdvaestar/",
-                    "best_seed": 2},
-        "SOBDRL": {"expe_folder": "./expe/flc/sobdrl/",
-                     "best_seed": 0},
         "GMA-VAE": {"expe_folder": "./expe/flc/gmavae/",
                 "best_seed": 1},
         "A-VAE": {"expe_folder": "./expe/flc/avae/",
                     "best_seed": 1},
-        "Beta-VAE": {"expe_folder": "./expe/flc/betavae/"},
-        "Factor-VAE": {"expe_folder": "./expe/flc/factorvae/"},
-        "DIP-VAE I": {"expe_folder": "./expe/flc/dipvae1/"},
-        "DIP-VAE II": {"expe_folder": "./expe/flc/dipvae2/"},
         "Random": {"expe_folder": "./expe/flc/random/"}
     },
     "flp": {
-        "LSBD-VAE": {"expe_folder": "./expe/flp/lsbdvae/",
-                     "best_seed": 4},
-        "LSBD-VAE*": {"expe_folder": "./expe/flp/lsbdvaestar/",
-                    "best_seed": 1},
-        "SOBDRL": {"expe_folder": "./expe/flp/sobdrl/",
-                        "best_seed": 2},
         "GMA-VAE": {"expe_folder": "./expe/flp/gmavae/",
                 "best_seed": 1},
         "A-VAE": {"expe_folder": "./expe/flp/avae/",
                   "best_seed": 3},
-        "Beta-VAE": {"expe_folder": "./expe/flp/betavae/"},
-        "Factor-VAE": {"expe_folder": "./expe/flp/factorvae/"},
-        "DIP-VAE I": {"expe_folder": "./expe/flp/dipvae1/"},
-        "DIP-VAE II": {"expe_folder": "./expe/flp/dipvae2/"},
         "Random": {"expe_folder": "./expe/flp/random/"}
     },
     "coil2": {
-        "LSBD-VAE": {"expe_folder": "./expe/coil2/lsbdvae/",
-                     "best_seed": 0},
-        "LSBD-VAE*": {"expe_folder": "./expe/coil2/lsbdvaestar/",
-                    "best_seed": 4},
-        "SOBDRL": {"expe_folder": "./expe/coil2/sobdrl/",
-                     "best_seed": 4, 
-                     "entangled_seeds": [1, 3],
-                     "disentangled_seeds": [0, 2, 4]},
         "GMA-VAE": {"expe_folder": "./expe/coil2/gmavae/",
                 "best_seed": 0},
         "A-VAE": {"expe_folder": "./expe/coil2/avae/",
                   "best_seed": 4},
-        "Beta-VAE": {"expe_folder": "./expe/coil2/betavae/"},
-        "Factor-VAE": {"expe_folder": "./expe/coil2/factorvae/"},
-        "DIP-VAE I": {"expe_folder": "./expe/coil2/dipvae1/"},
-        "DIP-VAE II": {"expe_folder": "./expe/coil2/dipvae2/"},
         "Random": {"expe_folder": "./expe/coil2/random/"}
-    },
-    "shapes": {
-        "LSBD-VAE": {"expe_folder": "./expe/shapes2/lsbdvae/",
-                     "best_seed": null},
-        "LSBD-VAE*": {"expe_folder": "./expe/shapes2/lsbdvaestar/",
-                    "best_seed": null},
-        "SOBDRL": {"expe_folder": "./expe/shapes2/sobdrl/",
-                     "best_seed": null},
-        "GMA-VAE": {"expe_folder": "./expe/shapes2/gmavae/",
-                "best_seed": null},
-        "A-VAE": {"expe_folder": "./expe/shapes2/avae/",
-                  "best_seed": null},
-        "Beta-VAE": {"expe_folder": "./expe/shapes2/betavae/"},
-        "Factor-VAE": {"expe_folder": "./expe/shapes2/factorvae/"},
-        "DIP-VAE I": {"expe_folder": "./expe/shapes2/dipvae1/"},
-        "DIP-VAE II": {"expe_folder": "./expe/shapes2/dipvae2/"},
-        "Random": {"expe_folder": "./expe/shapes2/random/"}
-    },
-    "coil3": {
-        "LSBD-VAE": {"expe_folder": "./expe/coil3/lsbdvae/",
-                     "best_seed": 4},
-        "LSBD-VAE*": {"expe_folder": "./expe/coil3/lsbdvaestar/",
-                    "best_seed": 2},
-        "SOBDRL": {"expe_folder": "./expe/coil3/sobdrl/",
-                     "best_seed": 0, 
-                     "entangled_seeds": [0,1,2,3,4],
-                     "disentangled_seeds": []},
-        "GMA-VAE": {"expe_folder": "./expe/coil3/gmavae/",
-                "best_seed": 3},
-        "A-VAE": {"expe_folder": "./expe/coil3/avae/",
-                  "best_seed": 2},
-        "Beta-VAE": {"expe_folder": "./expe/coil3/betavae/"},
-        "Factor-VAE": {"expe_folder": "./expe/coil3/factorvae/"},
-        "DIP-VAE I": {"expe_folder": "./expe/coil3/dipvae1/"},
-        "DIP-VAE II": {"expe_folder": "./expe/coil3/dipvae2/"},
-        "Random": {"expe_folder": "./expe/coil3/random/"}
-    },
-    "coil2_entangled": {
-        "SOBDRL\nk=1": {"expe_folder": "./expe/coil2_entangled/k1_sobdrl/"},
-        "SOBDRL\nk=2": {"expe_folder": "./expe/coil2_entangled/k2_sobdrl/"},
-        "SOBDRL\nk=3": {"expe_folder": "./expe/coil2_entangled/k3_sobdrl/"},
-        "LSBD-VAE*\nk=1": {"expe_folder": "./expe/coil2_entangled/k1_lsbdvaestar/"},
-        "LSBD-VAE*\nk=2": {"expe_folder": "./expe/coil2_entangled/k2_lsbdvaestar/"},
-        "LSBD-VAE*\nk=3": {"expe_folder": "./expe/coil2_entangled/k3_lsbdvaestar/"},
-        "A-VAE": {"expe_folder": "./expe/coil2/avae/"}
-    },
-    "random": {
-        "Coil2": {"expe_folder": "./expe/coil2/random/"},
-        "Coil3": {"expe_folder": "./expe/coil3/random/"},
-        "FLC": {"expe_folder": "./expe/flc/random/"},
-        "FLP": {"expe_folder": "./expe/flp/random/"}
-    },
-    "coil_randomaction": {
-        "0": {"expe_folder": "./expe/coil_randomaction0/k2/"},
-        "1": {"expe_folder": "./expe/coil_randomaction1/k2/"},
-        "2": {"expe_folder": "./expe/coil_randomaction2/k2/"}
-    },
-    "coil2_iid": {
-        "LSBD-VAE": {"expe_folder": "./expe/coil2_iid/lsbdvae/"},
-        "LSBD-VAE*": {"expe_folder": "./expe/coil2_iid/lsbdvaestar/"},
-        "SOBDRL": {"expe_folder": "./expe/coil2_iid/sobdrl/",
-                     "entangled_seeds": [1, 2],
-                     "disentangled_seeds": [0, 3, 4]},
-        "A-VAE": {"expe_folder": "./expe/coil2_iid/avae/"},
-        "GMA-VAE": {"expe_folder": "./expe/coil2_iid/gmavae/"}
-    },
-    "coil2_ood": {
-        "LSBD-VAE": {"expe_folder": "./expe/coil2_ood/lsbdvae/"},
-        "LSBD-VAE*": {"expe_folder": "./expe/coil2_ood/lsbdvaestar/"},
-        "SOBDRL": {"expe_folder": "./expe/coil2_ood/sobdrl/",
-                     "entangled_seeds": [0,1,2,3],
-                     "disentangled_seeds": [4]},
-        "A-VAE": {"expe_folder": "./expe/coil2_ood/avae/"},
-        "GMA-VAE": {"expe_folder": "./expe/coil2_ood/gmavae/"}
-    },
-    "coil3_iid": {
-        "LSBD-VAE": {"expe_folder": "./expe/coil3_iid/lsbdvae/"},
-        "LSBD-VAE*": {"expe_folder": "./expe/coil3_iid/lsbdvaestar/"},
-        "SOBDRL": {"expe_folder": "./expe/coil3_iid/sobdrl/"},
-        "A-VAE": {"expe_folder": "./expe/coil3_iid/avae/"},
-        "GMA-VAE": {"expe_folder": "./expe/coil3_iid/gmavae/"}
-    },
-    "coil3_ood": {
-        "LSBD-VAE": {"expe_folder": "./expe/coil3_ood/lsbdvae/"},
-        "LSBD-VAE*": {"expe_folder": "./expe/coil3_ood/lsbdvaestar/"},
-        "SOBDRL": {"expe_folder": "./expe/coil3_ood/sobdrl/"},
-        "A-VAE": {"expe_folder": "./expe/coil3_ood/avae/"},
-        "GMA-VAE": {"expe_folder": "./expe/coil3_ood/gmavae/"}
-    },
-    "mpi3d": {
-        "SOBDRL": {"expe_folder": "./expe/mpi3d/sobdrl/",
-                   "best_seed": 3},
-        "HAE": {"expe_folder": "./expe/mpi3d/hae/",
-                "best_seed": 3},
-        "GMA-VAE": {"expe_folder": "./expe/mpi3d/gmavae/",
-                    "best_seed": 2},
-        "Beta-VAE": {"expe_folder": "./expe/mpi3d/betavae/"},
-        "Random": {"expe_folder": "./expe/mpi3d/random/"}
-    },
-    "mpi3d_noisy": {
-        "SOBDRL": {"expe_folder": "./expe/mpi3d_noisy/sobdrl/",
-                   "best_seed": 4},
-        "HAE": {"expe_folder": "./expe/mpi3d_noisy/hae/",
-                "best_seed": 3},
-        "GMA-VAE": {"expe_folder": "./expe/mpi3d_noisy/gmavae/",
-                            "best_seed": 4}
     }
 }
