@@ -6,4 +6,4 @@ configs/*/
 .env
 .venv/
 __pycache__/
-images/
+images/Miniconda3-latest-Linux-x86_64.sh
