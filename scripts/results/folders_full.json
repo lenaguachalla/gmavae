@@ -16,6 +16,13 @@
         "DIP-VAE II": {"expe_folder": "./expe/flc/dipvae2/"},
         "Random": {"expe_folder": "./expe/flc/random/"}
     },
+    "flc_noisy_obs": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs/gmavae/",
+                "best_seed": 1},
+        "A-VAE": {"expe_folder": "./expe/flc_noisy_obs/avae/",
+                    "best_seed": 1},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs/random/"}
+    },
     "flp": {
         "LSBD-VAE": {"expe_folder": "./expe/flp/lsbdvae/",
                      "best_seed": 4},
@@ -51,6 +58,13 @@
         "DIP-VAE I": {"expe_folder": "./expe/coil2/dipvae1/"},
         "DIP-VAE II": {"expe_folder": "./expe/coil2/dipvae2/"},
         "Random": {"expe_folder": "./expe/coil2/random/"}
+    },
+    "coil2_noisy_obs": {
+        "GMA-VAE": {"expe_folder": "./expe/coil2_noisy_obs/gmavae/",
+                "best_seed": 0},
+        "A-VAE": {"expe_folder": "./expe/coil2_noisy_obs/avae/",
+                  "best_seed": 4},
+        "Random": {"expe_folder": "./expe/coil2_noisy_obs/random/"}
     },
     "shapes": {
         "LSBD-VAE": {"expe_folder": "./expe/shapes2/lsbdvae/",
@@ -150,12 +164,12 @@
         "Beta-VAE": {"expe_folder": "./expe/mpi3d/betavae/"},
         "Random": {"expe_folder": "./expe/mpi3d/random/"}
     },
-    "mpi3d_noisy": {
-        "SOBDRL": {"expe_folder": "./expe/mpi3d_noisy/sobdrl/",
+    "mpi3d_noisy_action": {
+        "SOBDRL": {"expe_folder": "./expe/mpi3d_noisy_action/sobdrl/",
                    "best_seed": 4},
-        "HAE": {"expe_folder": "./expe/mpi3d_noisy/hae/",
+        "HAE": {"expe_folder": "./expe/mpi3d_noisy_action/hae/",
                 "best_seed": 3},
-        "GMA-VAE": {"expe_folder": "./expe/mpi3d_noisy/gmavae/",
+        "GMA-VAE": {"expe_folder": "./expe/mpi3d_noisy_action/gmavae/",
                             "best_seed": 4}
     }
 }

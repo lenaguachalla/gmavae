@@ -61,6 +61,7 @@ class MPI3DGenerator(Generator) :
             "environment": "mpi3d",
             
         }
+    
     def add_action_noise(self, a, std):
         if std == 0.0 :
             return a

@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 from data_generator.data_generator import Generator
 from typing import List
 from data_generator.groups import generate_group, GroupProduct, PermutationGroup, CyclicGroup
@@ -91,7 +92,7 @@ class FlatlandGenerator(Generator) :
         image[B_indices,X_indices,Y_indices] = color
         
         return image
-    
+
     @property
     def specs(self) -> dict:
         return {

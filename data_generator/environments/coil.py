@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 import matplotlib.pyplot as plt
 from data_generator.data_generator import Generator
 from typing import List
@@ -109,7 +110,6 @@ class CoilGenerator(Generator) :
                 mask[right_most==i, action] = True
         return mask
 
-    
     @property
     def specs(self) -> dict :
         return {

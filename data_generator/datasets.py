@@ -10,6 +10,7 @@ class EnvLoader() :
                  m: int = 1,                        #sequence length
                  n_actions_per_state: int = None,   #number of actions available per state
                  action_noise_std: float = 0.0,     #additive noise on the action
+                 obs_noise_std: float = 0.0,        #additive noise on the observation
                  ood: bool = False,                 #out of distribution setup
                  device = "cpu",
                  ):
@@ -27,6 +28,7 @@ class EnvLoader() :
         self.batch_size = batch_size
         self.m = m
         self.action_noise_std = action_noise_std
+        self.obs_noise_std = obs_noise_std
         self.send = False
         self.device = device
         self.dataset = self.dataset.to(self.device)
@@ -62,9 +64,15 @@ class EnvLoader() :
                 else :
                     A = torch.randint(0, self.generator.group.n_actions, size=(self.batch_size,))
                 
-                i = self.generator.group.transition(i, 
-                                                    self.generator.add_action_noise(A, self.action_noise_std))
-                images.append(self.dataset[i])
+                i = self.generator.group.transition(i, self.generator.add_action_noise(A, self.action_noise_std))
+                
+                "Add gaussian noise to the observation"
+                img = self.dataset[i]
+                if self.obs_noise_std > 0.0:
+                    img = img + torch.randn_like(img) * self.obs_noise_std
+                    img = torch.clamp(img, 0.0, 1.0)
+
+                images.append(img)
                 actions.append(A)
 
             images = torch.stack(images, axis=1)

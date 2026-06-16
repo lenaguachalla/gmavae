@@ -1,4 +1,4 @@
-name_expe: mpi3d_noisy/gmavae
+name_expe: mpi3d_noisy_action/gmavae
 lr: 0.001
 metrics: [prediction,reconstruction, entropy, dim, inde]
 batch_size: 16
