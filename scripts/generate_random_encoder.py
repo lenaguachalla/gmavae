@@ -62,7 +62,7 @@ algo_specs = {
 
 if __name__ == "__main__":
 
-    inputs = [{"dataname": "coil/2",
+    '''inputs = [{"dataname": "coil/2",
                "model_folder": "./expe/coil2/random/"},
               {"dataname": "coil/3",
                "model_folder": "./expe/coil3/random/"},
@@ -73,7 +73,10 @@ if __name__ == "__main__":
               {"dataname": "shapes/ss2",
                "model_folder": "./expe/shapes2/random/"},
               {"dataname": "mpi3d/lie",
-               "model_folder": "./expe/mpi3d/random/"}]
+               "model_folder": "./expe/mpi3d/random/"}]'''
+    
+    inputs = [{"dataname": "flatland/cyclic",
+               "model_folder": "./expe/flc_noisy_obs/random/"}]
 
     for input in inputs :
         main(**input, n_seeds=5)

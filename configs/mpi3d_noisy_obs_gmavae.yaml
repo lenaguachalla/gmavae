@@ -1,22 +1,27 @@
-name_expe: coil2_noisy_obs/avae
+name_expe: mpi3d_noisy_obs/gmavae
 lr: 0.001
-metrics: [groups, prediction, reconstruction, norm_z]
+metrics: [prediction,reconstruction, entropy, dim, inde]
 batch_size: 16
-epoch: 5.e+4
+epoch: 1.e+5
 seed: range(5)
 dataset: 
-  name: coil/2
+  name: mpi3d/lie
   obs_noise_std: 0.1
   m: 5
 algo_specs:
   type: gmavae
-  z_dim: 13
+  z_dim: 4
   lamda_r: 1
-  lamda_a: 0.1
-  focal_loss: 1
-  group_masking: false
+  lamda_a: 0.01
+  group_masking: true
+  lamda_d: 1.e-3
+  target_d:
+    type: affine
+    values: [1.1,0]
+    timesteps: [5.e+4,8.e+4]
   action_specs:
-    type: dense
+    type: dense_continuous
+    hidden_dims: [256,256]
     activation_fn: tanh
   image_specs:
     type: ae

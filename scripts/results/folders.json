@@ -1,6 +1,9 @@
 {
     "flc_noisy_obs": {
         "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs/gmavae/",
-                "best_seed": 4}
+                "best_seed": 1},
+        "A-VAE": {"expe_folder": "./expe/flc_noisy_obs/avae/",
+                    "best_seed": 1},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs/random/"}
     }
 }
