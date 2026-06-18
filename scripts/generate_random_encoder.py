@@ -62,6 +62,8 @@ algo_specs = {
 
 if __name__ == "__main__":
 
+    #Generates random encoders for selected experiments
+
     '''inputs = [{"dataname": "coil/2",
                "model_folder": "./expe/coil2/random/"},
               {"dataname": "coil/3",
@@ -76,7 +78,7 @@ if __name__ == "__main__":
                "model_folder": "./expe/mpi3d/random/"}]'''
     
     inputs = [{"dataname": "flatland/cyclic",
-               "model_folder": "./expe/flc_noisy_obs/random/"}]
+               "model_folder": "./expe/flc_noisy_obs2/random/"}]
 
     for input in inputs :
         main(**input, n_seeds=5)

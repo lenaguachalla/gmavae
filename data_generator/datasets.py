@@ -66,7 +66,7 @@ class EnvLoader() :
                 
                 i = self.generator.group.transition(i, self.generator.add_action_noise(A, self.action_noise_std))
                 
-                "Add gaussian noise to the observation"
+                # Add gaussian noise to the observation
                 img = self.dataset[i]
                 if self.obs_noise_std > 0.0:
                     img = img + torch.randn_like(img) * self.obs_noise_std

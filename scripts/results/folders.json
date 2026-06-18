@@ -1,9 +1,20 @@
 {
-    "flc_noisy_obs": {
-        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs/gmavae/",
+    "flc": {
+        "GMA-VAE": {"expe_folder": "./expe/flc/gmavae/",
                 "best_seed": 1},
-        "A-VAE": {"expe_folder": "./expe/flc_noisy_obs/avae/",
+        "A-VAE": {"expe_folder": "./expe/flc/avae/",
                     "best_seed": 1},
+        "Random": {"expe_folder": "./expe/flc/random/"}
+    },
+    
+    "flc_noisy_obs": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs/gmavae/"},
+        "A-VAE": {"expe_folder": "./expe/flc_noisy_obs/avae/"},
         "Random": {"expe_folder": "./expe/flc_noisy_obs/random/"}
+    },
+    "flc_noisy_obs2": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2/gmavae/"},
+        "A-VAE": {"expe_folder": "./expe/flc_noisy_obs2/avae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs2/random/"}
     }
 }
