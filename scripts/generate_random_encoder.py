@@ -78,7 +78,7 @@ if __name__ == "__main__":
                "model_folder": "./expe/mpi3d/random/"}]'''
     
     inputs = [{"dataname": "flatland/cyclic",
-               "model_folder": "./expe/flc_noisy_obs2/random/"}]
+               "model_folder": "./expe/flc_noisy_obs5/random/"}]
 
     for input in inputs :
         main(**input, n_seeds=5)
