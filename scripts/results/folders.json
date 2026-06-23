@@ -14,8 +14,21 @@
     },
 
     "flc_noisy_obs2": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2/gmavae/"},
         "A-VAE": {"expe_folder": "./expe/flc_noisy_obs2/avae/"},
         "Random": {"expe_folder": "./expe/flc_noisy_obs2/random/"}
+    },
+
+    "flc_noisy_obs2_v2": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2_v2/gmavae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs2_v2/random/"}
+
+    },
+
+    "flc_noisy_obs2_v3": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2_v3/gmavae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs2_v3/random/"}
+
     },
 
     "flc_noisy_obs5": {
