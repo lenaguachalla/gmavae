@@ -12,7 +12,7 @@ from dislib import utils
 def compute_cosine(x:np.ndarray, y:np.ndarray) -> float:
     """Compute the cosine similarity between two vectors."""
     if np.linalg.norm(x) * np.linalg.norm(y) == 0:
-        raise KeyError
+        #raise KeyError
         return 1.
     return np.dot(x, y) / (np.linalg.norm(x) * np.linalg.norm(y))
 

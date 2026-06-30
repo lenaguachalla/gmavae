@@ -13,6 +13,11 @@
         "Random": {"expe_folder": "./expe/flc_noisy_obs/random/"}
     },
 
+    "flc_noisy_obs8": {
+        "A-VAE": {"expe_folder": "./expe/flc_noisy_obs8/avae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs8/random/"}
+    },
+
     "flc_noisy_obs2": {
         "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2/gmavae/"},
         "A-VAE": {"expe_folder": "./expe/flc_noisy_obs2/avae/"},
@@ -31,8 +36,38 @@
 
     },
 
-    "flc_noisy_obs5": {
-        "A-VAE": {"expe_folder": "./expe/flc_noisy_obs5/avae/"},
-        "Random": {"expe_folder": "./expe/flc_noisy_obs5/random/"}
+    "flc_noisy_obs2_v5": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2_v3/gmavae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs2_v3/random/"}
+
+    },
+
+    "flc_noisy_obs2_v6": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2_v4/gmavae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs2_v4/random/"}
+
+    },
+
+    "flc_noisy_obs2_v7": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2_v7/gmavae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs2_v7/random/"}
+
+    },
+
+    "flc_noisy_obs2_v9": {
+        "GMA-VAE": {"expe_folder": "./expe/flc_noisy_obs2_v9/gmavae/"},
+        "Random": {"expe_folder": "./expe/flc_noisy_obs2_v9/random/"}
+
+    },
+
+    "coil2_noisy_obs": {
+        "GMA-VAE": {"expe_folder": "./expe/coil2_noisy_obs/gmavae/"},
+        "A-VAE": {"expe_folder": "./expe/coil2_noisy_obs/avae/"},
+        "Random": {"expe_folder": "./expe/coil2_noisy_obs/random/"}
+    },
+
+    "coil2_noisy_obs3": {
+        "GMA-VAE": {"expe_folder": "./expe/coil2_noisy_obs3/gmavae/"},
+        "Random": {"expe_folder": "./expe/coil2_noisy_obs3/random/"}
     }
 }

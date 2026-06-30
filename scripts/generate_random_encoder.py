@@ -75,10 +75,12 @@ if __name__ == "__main__":
               {"dataname": "shapes/ss2",
                "model_folder": "./expe/shapes2/random/"},
               {"dataname": "mpi3d/lie",
-               "model_folder": "./expe/mpi3d/random/"}]'''
+               "model_folder": "./expe/mpi3d/random/"},
+               {"dataname": "flatland/cyclic",
+               "model_folder": "./expe/flc_noisy_obs8/random/"}]'''
     
     inputs = [{"dataname": "flatland/cyclic",
-               "model_folder": "./expe/flc_noisy_obs2_v3/random/"}]
+               "model_folder": "./expe/flc_noisy_obs2_v9/random/"}]
 
     for input in inputs :
         main(**input, n_seeds=5)
