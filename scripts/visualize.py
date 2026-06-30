@@ -1,22 +1,19 @@
 """
 Visualize noisy observations and their reconstructions from a trained model
 
-Usage:
-    # Single model — 3 rows: clean | noisy | reconstructed
-    python scripts/visualize.py expe/flc/gmavae/0/last_model flatland/cyclic 0.2 
+    Single model (3 rows): clean, noisy, recon
+    python scripts/visualize.py flc 0.2 
 
-    # Compare two models — 4 rows: clean | noisy | recon (model1) | recon (model2)
-    python scripts/visualize.py expe/flc/gmavae/0/last_model flatland/cyclic 0.2 expe/flc_noisy_obs2/gmavae/0/last_model
+    Compare two models (4 rows) clean, noisy, recon1, recon2
+    python scripts/visualize.py flc 0.2 flc_noisy_obs2
 
 Arguments:
-    1: path to model (last_model file)
-    2: dataset name (e.g. flatland/cyclic, coil/2)
-    3: obs_noise_std (float)
-    4: (optional) path to second model for comparison
-    5: (optional) n_samples (default 8)
-    6: (optional) output path (default images/reconstruction.png)
+    1: model name (like flc, flc_noisy_obs, coil2)
+    2: obs_noise_std (float)
+    3: (optional) second model name for comparison
 
-    # python3 scripts/visualize.py expe/flc/gmavae/0/last_model flatland/cyclic 0.1 expe/flc_noisy_obs2/gmavae/0/last_model 8 images/visu/reconstruction.png
+Obs: models are set to be gmavae on seed 0. Output path and number of samples can be changed 
+    
 """
 
 import torch

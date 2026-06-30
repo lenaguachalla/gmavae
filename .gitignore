@@ -1,6 +1,7 @@
 data/
 data_raw/
 expe/
+expe2/
 configs/*/
 !configs/*.*
 .env
