@@ -19,6 +19,22 @@ specs = [
     },
 },
 {
+    "environment": "flatland_speed_coupled",
+    "name": "cyclic",
+    "specs" : {
+        "color_type": "cyclic",
+        "n_pos": 5,
+    },
+},
+{
+    "environment": "flatland_inverted_coupled",
+    "name": "cyclic",
+    "specs" : {
+        "color_type": "cyclic",
+        "n_pos": 5,
+    },
+},
+{
     "environment": "coil",
     "name": "2",
     "specs" : {

@@ -70,6 +70,10 @@ def get_generator(environnement: str,
     match environnement :
         case "flatland" :
             from data_generator.environments.flatland import FlatlandGenerator as DataGenerator
+        case "flatland_speed_coupled" :
+            from data_generator.environments.flatland_coupled import FlatlandSpeedCoupled as DataGenerator
+        case "flatland_inverted_coupled" :
+            from data_generator.environments.flatland_coupled import FlatlandInvertedCoupled as DataGenerator
         case "coil" :
             from data_generator.environments.coil import CoilGenerator as DataGenerator
         case "shapes" :

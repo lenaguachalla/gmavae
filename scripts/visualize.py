@@ -2,18 +2,20 @@
 Visualize noisy observations and their reconstructions from a trained model
 
     Single model (3 rows): clean, noisy, recon
-    python scripts/visualize.py flc 0.2 
+    - python scripts/visualize.py flc 0.2 
 
     Compare two models (4 rows) clean, noisy, recon1, recon2
-    python scripts/visualize.py flc 0.2 flc_noisy_obs2
+    - python scripts/visualize.py flc 0.2 flc_noisy_obs2
 
 Arguments:
     1: model name (like flc, flc_noisy_obs, coil2)
     2: obs_noise_std (float)
     3: (optional) second model name for comparison
 
-Obs: models are set to be gmavae on seed 0. Output path and number of samples can be changed 
-    
+Obs: models are set to be gmavae on seed 0. Output path and number of samples can be changed on the script
+
+e.g.: python scripts/visualize.py flc 0.2 flc_noisy_obs2
+
 """
 
 import torch
@@ -49,15 +51,15 @@ def plot_rows(rows, title, output, n_samples):
 
 if __name__ == "__main__":
 
-    model_path = ('expe/' + sys.argv[1] + '/gmavae/0/last_model') if len(sys.argv) > 1 else KeyError("Provide the model as the first argument")
+    model_path = ('expe/' + sys.argv[1] + '/gmavae_mask/0/last_model') if len(sys.argv) > 1 else KeyError("Provide the model as the first argument")
     obs_noise_std = float(sys.argv[2]) if len(sys.argv) > 2 else KeyError("Provide the observation noise as the second argument")
-    model_path2 = ('expe/' + sys.argv[3] + 'gmavae/0/last_model') if len(sys.argv) > 3 else None
+    model_path2 = ('expe/' + sys.argv[3] + '/gmavae_mask/0/last_model') if len(sys.argv) > 3 else None
     
-    with open('expe/' + sys.argv[1] + '/gmavae/config.yaml', 'r') as f:
+    with open('expe/' + sys.argv[1] + '/gmavae_mask/config.yaml', 'r') as f:
         config = yaml.safe_load(f)
     dataset = config["dataset"]["name"]
 
-    output = "images/visu/reconstruction.png" # Change output path as to not overwrite every time
+    output = "images/visu/flcic_mod_gmavae_mask.png" # Change output path as to not overwrite every time
     n_samples = 8 # Default number of samples to visualize
 
     torch.manual_seed(42)
@@ -82,7 +84,7 @@ if __name__ == "__main__":
             recon2 = algo2.forward(noisy)
 
         rows = [clean, noisy, recon, recon2]
-        title = f"Model 1: {sys.argv[1]}  |  Model 2: {sys.argv[3]} \n Dataset: {dataset}  |  Noise std = {obs_noise_std}"
+        title = f"Model 1: {sys.argv[1]}  |  Model 2: {sys.argv[3]}_gmavae \n Dataset: {dataset}  |  Noise std = {obs_noise_std}"
 
     else:
 

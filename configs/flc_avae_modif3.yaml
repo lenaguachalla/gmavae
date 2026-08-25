@@ -1,0 +1,41 @@
+name_expe: flc_modif3/avae
+lr: 0.0001
+metrics: [groups, prediction, reconstruction, norm_z]
+batch_size: 16
+epoch: 1.e+5
+seed: range(5)
+dataset: 
+  name: flatland/cyclic
+  obs_noise_std: 0.2
+  m: 5
+algo_specs:
+  type: gmavae
+  z_dim: 15
+  lamda_r: 1
+  lamda_a: .01
+  focal_loss: 1
+  group_masking: false
+  action_specs:
+    type: dense
+    activation_fn: tanh
+  image_specs:
+    type: ae
+    z_noise: 0.1
+    encoder_specs:
+      type: conv2d
+      hidden_channels: [32,64,128,256]
+      kernel_size: 4
+      pooling: null
+      activation_fn: leaky_relu
+      stride: 2
+      padding: 1
+      hidden_dim: [256]
+    decoder_specs:
+      type: deconv2d
+      hidden_channels: [256,128,64,32]
+      kernel_size: 4
+      activation_fn: leaky_relu
+      pooling: null
+      stride: 2
+      padding: 1
+      hidden_dim: [256]

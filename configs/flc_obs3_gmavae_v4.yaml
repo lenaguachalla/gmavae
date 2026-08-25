@@ -1,0 +1,46 @@
+name_expe: flc_obs3_v4/gmavae
+lr: 0.0005
+metrics: [inde, dim, entropy, prediction, reconstruction, norm_z]
+batch_size: 16
+epoch: 1.e+5
+seed: range(5)
+dataset: 
+  name: flatland/cyclic
+  obs_noise_std: 0.3
+  m: 5
+algo_specs:
+  type: gmavae
+  z_dim: 10
+  lamda_r: 1
+  lamda_a: .1
+  lamda_d: .001
+  target_d:
+    type: affine
+    values: [1.1, 0]
+    timesteps: [7.e+4,8.e+4]
+  group_masking: true
+  focal_loss: 1
+  action_specs:
+    type: dense
+    activation_fn: tanh
+  image_specs:
+    type: ae
+    z_noise: 0.1
+    encoder_specs:
+      type: conv2d
+      hidden_channels: [32,64,128,256]
+      kernel_size: 4
+      activation_fn: leaky_relu
+      pooling: null
+      stride: 2
+      padding: 1
+      hidden_dim: [256]
+    decoder_specs:
+      type: deconv2d
+      hidden_channels: [256,128,64,32]
+      kernel_size: 4
+      activation_fn: leaky_relu
+      pooling: null
+      stride: 2
+      padding: 1
+      hidden_dim: [256]

@@ -89,6 +89,8 @@ def generate_algo(specs: dict,
     match type:
         case "gmavae" :
             from algos.gmavae import GMAVAE as Algo
+        case "gmavae_mask" :
+            from algos.gmavae_mask import GMAVAEMask as Algo
         case "sobdrl" :
             from algos.sobdrl import SOBDRL as Algo
         case "lsbdvae" :
